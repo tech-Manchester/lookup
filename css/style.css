@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap");
+:root {
+  /* / / /  COLORS  / / / */
+
+  --color-neutral-900: #050505;
+  --color-neutral-800: #1f1f1f;
+  --color-neutral-700: #2d2d2d;
+  --color-neutral-600: #3a3a3a;
+  --color-neutral-500: #838383;
+  --color-neutral-400: #e8e8e8;
+  --color-neutral-300: #f4f4f4;
+  --color-neutral-100: #ffffff;
+  --color-primary-400: #a445ed;
+  --color-warning-400: #ff5252;
+
+  /* / / /  LAYOUT / / / */
+
+  /* PADDINGS */
+  --padding-300: 0.5rem;
+  --padding-400: 1rem;
+  --padding-600: 1.25rem;
+
+  /* MARGINS */
+  --margin-400: var(--padding-400);
+
+  /* GAPS */
+  --gap-400: var(--padding-400);
+  --gap-600: var(var(--padding-600));
+
+  /* BORDER RADIUS */
+  --border-radius-400: 10px;
+
+  /* / / /  TYPOGRAPHY / / / */
+
+  /* FONT FAMILIES */
+  --fontfamily-sansserif: "Inter", sans-serif;
+  --fontfamily-serif: "PT Serif", serif;
+  --fontfamily-mono: "Roboto Mono", monospace;
+
+  /* FONT SIZES */
+  --fontsize-heading-600: 4rem;
+  --fontsize-heading-400: 1.5rem;
+  --fontsize-heading-200: 1.25rem;
+  --fontsize-body-400: 1.125rem;
+  --fontsize-body-200: 0.875rem;
+
+  /* FONT WEIGHTS */
+  --fontweight-400: 400;
+  --fontweight-700: 700;
+
+  /* LINE HEIGHTS */
+  --lineheight-800: 4.813rem;
+  --lineheight-500: 1.813rem;
+  --lineheight-400: 1.5rem;
+  --lineheight-300: 1.063rem;
+}
+
+/* / / /  BASE STYLES / / / */
+
+/* BODY */
+body {
+  padding: var(--padding-400);
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--color-neutral-100);
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+a,
+input[type="text"] {
+  font-family: var(--fontfamily-sansserif);
+  color: var(--color-neutral-800);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--padding-300);
+}
+
+.utilities {
+  display: flex;
+  gap: var(--gap-400);
+}
+
+select {
+  text-align: right;
+  background: none;
+  border: none;
+  font-weight: var(--fontweight-700);
+  font-size: var(--fontsize-body-200);
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+select:is(:hover, :focus, :active) {
+  outline: transparent;
+}
+
+#sansserif {
+  font-family: var(--fontfamily-sansserif);
+}
+
+#serif {
+  font-family: var(--fontfamily-serif);
+}
+
+#mono {
+  font-family: var(--fontfamily-mono);
+}
+
+#toggleTheme {
+  background: none;
+  border: none;
+}
+
+#toggleTheme:hover {
+  cursor: pointer;
+}
+
+/* MAIN */
+main {
+  padding-block: var(--padding-400);
+}
+/* SEARCH */
+.search {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-neutral-400);
+  padding: var(--padding-300) var(--padding-400);
+  border-radius: var(--border-radius-400);
+}
+
+.search input {
+  background: none;
+  border: none;
+  padding-inline: var(--padding-300);
+  font-weight: var(--fontweight-700);
+  width: 100%;
+  min-height: 40px;
+}
+
+.search input:is(:active, :focus) {
+  outline: transparent;
+}
+
+.search button {
+  border: none;
+  background: none;
+}
+
+.search button:hover {
+  cursor: pointer;
+}
+
+/* RESULTS */
+.results {
+  padding-block: var(--padding-400);
+}
+/* RESULTS HEADER */
+.results__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--padding-400);
+}
+
+.header__text > span {
+  color: var(--color-primary-400);
+}
+
+.header__interact > img {
+  max-width: 50px;
+  padding-block: var(--padding-400);
+}
+
+h1 {
+  font-size: var(--fontsize-heading-400);
+}
+
+/* RESULTS BODY */
+
+/* PART OF SENTENCE */
+
+.body__partofSentence {
+  padding-block: var(--padding-400);
+}
+
+.partOfSentence {
+  font-weight: var(--fontweight-700);
+  font-size: var(--fontsize-body-400);
+  width: 100px;
+  padding-right: var(--padding-300);
+}
+
+.body__partOfSentence hr {
+  color: var(--color-neutral-100);
+  display: inline-block;
+  width: calc(100% - 100px);
+}
+
+/* MEANING */
+
+.meaning {
+  color: var(--color-neutral-500);
+}
+
+.body__meaning ul {
+  padding-block: var(--padding-400);
+
+  padding-inline: var(--padding-400);
+  color: var(--color-primary-400);
+}
+
+/* SYNONYMS */
+.body__synonyms {
+  display: flex;
+  flex-direction: column;
+  column-gap: var(--gap-400);
+  padding-block: var(--padding-400);
+}
+
+.body__synonyms span {
+  color: var(--color-primary-400);
+  font-weight: var(--fontweight-700);
+  font-size: var(--fontsize-body-200);
+}
+span.synonyms {
+  font-size: var(--fontsize-body-400);
+  font-weight: var(--fontweight-400);
+  color: var(--color-neutral-500);
+}
+
+.dark {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+  stroke: var(--color-primary-400);
+}
+
+.errorMessage {
+  max-width: 400px;
+  margin: auto;
+}
